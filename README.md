@@ -18,8 +18,7 @@ Project Description
 
 ## Live Demo
 
-[Netlify Live Demo Link](https://saidrasynl-bookstore-react.netlify.app/)<br/>
-[Heroku Live Demo Link](https://saidrasynl-bookstore-react.herokuapp.com/)
+[Netlify Live Demo Link](https://saidrasynl-bookstore-react.netlify.app/)
 
 ## Getting Started
 
