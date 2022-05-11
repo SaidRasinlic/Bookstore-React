@@ -1,6 +1,6 @@
 // Action Types
-const ADD_BOOK = 'ADD';
-const REMOVE_BOOK = 'REMOVE';
+const ADD_BOOK = 'bookstore-react/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore-react/books/REMOVE_BOOK';
 
 // Default state
 const defaultState = [];
