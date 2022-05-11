@@ -1,5 +1,5 @@
 // Action Types
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'bookstore-react/categories/CHECK_STATUS';
 
 // Default state
 const defaultState = [];
