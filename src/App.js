@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import Books from './pages/Book';
-import Categories from './pages/Categories';
+import CategoriesPage from './pages/CategoriesPage';
 import './css/App.css';
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/categories" element={<CategoriesPage />} />
         </Routes>
       </main>
     </Router>
