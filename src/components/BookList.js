@@ -1,35 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 
 const BookList = () => {
-  const books = [
-    {
-      id: 1,
-      name: 'Head First JavaScript',
-      category: 'Business',
-      author: 'Elisabeth Robson and Eric Freeman',
-    },
-    {
-      id: 2,
-      name: 'Masnavi',
-      category: 'Poetry',
-      author: 'Hazrat Maulana Jalaluddin Rumi',
-    },
-    {
-      id: 3,
-      name: 'Pinocchio',
-      category: 'Fiction',
-      author: 'Carlo Collodi',
-    },
-  ];
+  const books = useSelector((state) => state.books);
+
   return (
     <div>
       <ul className="">
         {books.map((book) => (
           <Book
-            key={book.id}
+            key={uuidv4()}
             id={book.id}
-            name={book.name}
+            title={book.title}
             author={book.author}
           />
         ))}
