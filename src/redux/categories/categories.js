@@ -8,10 +8,19 @@ const defaultState = [];
 const categoriesReducer = (state = defaultState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Under Construction.';
+      return {
+        ...state,
+        showStatus: !state.showStatus,
+      };
     default:
       return state;
   }
 };
+
+// Redux Actions
+export const checkStatus = () => ({
+  type: CHECK_STATUS,
+  showStatus: false,
+});
 
 export default categoriesReducer;
