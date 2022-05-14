@@ -9,7 +9,7 @@ const BookList = () => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
   let content = '';
   if (loading) {
