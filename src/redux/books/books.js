@@ -76,14 +76,10 @@ export const postBook = (book) => (dispatch) => {
 export const deleteBook = (id) => (dispatch) => {
   fetch(`${URL}/${id}`, {
     method: 'DELETE',
+    body: JSON.stringify({ item_id: id }),
   })
     .then(() => {
-      dispatch({
-        type: REMOVE_BOOK,
-        payload: {
-          item_id: id,
-        },
-      });
+      dispatch(removeBook(id));
     });
 };
 
@@ -104,7 +100,8 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return {
         ...state,
-        books: state.books.filter((book) => book.item_id !== action.payload.id),
+        loading: false,
+        books: state.books.filter((book) => book.item_id !== action.payload),
       };
     case FETCH_BOOKS:
       return {
