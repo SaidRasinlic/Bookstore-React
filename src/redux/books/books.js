@@ -14,7 +14,7 @@ export const addBook = (book) => ({
   payload: book,
 });
 
-export const removeBook = (id) => ({
+export const removeBook = ({ id }) => ({
   type: REMOVE_BOOK,
   payload: { id },
 });
@@ -96,9 +96,8 @@ const booksReducer = (state = books, action) => {
         loading: false,
         books: [...state.books, action.payload],
       };
-    // case REMOVE_BOOK:
-    //   return deleteBook(action.payload.id);
-    //   // state.filter((book) => book.id !== action.payload.id);
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.payload.id);
     case FETCH_BOOKS:
       return {
         ...state,
