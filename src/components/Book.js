@@ -5,7 +5,6 @@ import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { id, title, author } = props;
-  console.log(id, title, author);
   const dispatch = useDispatch();
 
   // Remove book from the list
