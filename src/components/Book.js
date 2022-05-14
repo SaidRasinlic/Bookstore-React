@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { id, title, author } = props;
+  console.log(id, title, author);
   const dispatch = useDispatch();
 
   // Remove book from the list
   const removeHandler = () => {
-    dispatch(removeBook(id));
+    dispatch(deleteBook(id));
   };
 
   return (
@@ -22,7 +23,7 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
