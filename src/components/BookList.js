@@ -13,7 +13,7 @@ const BookList = () => {
 
   let content = '';
   if (loading) {
-    content = <p>Loading...</p>;
+    content = <h2>Loading...</h2>;
   } else {
     content = books.map((book) => (
       <Book
@@ -28,7 +28,7 @@ const BookList = () => {
 
   return (
     <div>
-      <ul className="">
+      <ul className="books-list">
         {content}
       </ul>
     </div>
