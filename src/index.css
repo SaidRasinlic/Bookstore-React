@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap');
+
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --black-one: #000;
+  --black-two: #121212;
+  --grey-border: #e8e8e8;
+  --cool-blue: #4386bf;
+  --pinkish-grey: #c7c7c7;
+  --pale-grey: #f5f6fa;
+  --pale-grey-two: #fafafa;
+  --warm-grey: #888;
+  --white: #fff;
+  --azure: #0290ff;
+  --very-light-pink: #c4c4c4;
+  --medium-blue: #307bbe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+  background-color: var(--pale-grey-two);
+  min-height: 100vh;
+}
+
+.page-body {
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.menu-links a {
+  text-decoration: none;
+}
+
+.books-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

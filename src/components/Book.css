@@ -1,0 +1,105 @@
+.book-container {
+  padding: 1.6rem 1.6rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--grey-border);
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-details {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.book-details h2 {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1.275rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+  margin: 0.188rem 20.188rem 0 0;
+}
+
+.book-details h3 {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 0 2.438rem 0 0;
+}
+
+.book-details p {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--cool-blue);
+  margin: 0.25rem 0 0;
+}
+
+.book-actions-container button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--cool-blue);
+}
+
+.book-actions-container {
+  margin-top: 1.313rem;
+}
+
+.card-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 0;
+  flex-basis: 50%;
+}
+
+.current-position {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.current-position h3 {
+  margin: 0.438rem 6.813rem 0.25rem 0;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.current-position h2 {
+  margin: 0.063rem 3.625rem 0 0;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: var(--black-two);
+}
+
+.current-position button {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: var(--azure);
+  color: var(--white);
+}
+
+.current-position button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid var(--azure);
+}
