@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { v4 as uuidv4 } from 'uuid';
 import Book from './Book';
 import { getBooks } from '../redux/books/books';
 
@@ -24,7 +23,6 @@ const BookList = () => {
         author={book.author}
       />
     ));
-    console.log('mapiranje');
   }
 
   return (
