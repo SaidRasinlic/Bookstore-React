@@ -21,6 +21,7 @@ const BookList = () => {
         id={book.item_id}
         title={book.title}
         author={book.author}
+        category={book.category}
       />
     ));
   }
