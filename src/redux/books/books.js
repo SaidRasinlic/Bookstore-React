@@ -14,9 +14,9 @@ export const addBook = (book) => ({
   payload: book,
 });
 
-export const removeBook = ({ id }) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payload: { id },
+  payload: id,
 });
 
 export const fetchBooks = (books) => ({
@@ -34,7 +34,7 @@ export const fetchBooksLoading = () => ({
 });
 
 // Default state
-const books = {
+const initialState = {
   books: [],
   loading: false,
   error: null,
@@ -78,12 +78,17 @@ export const deleteBook = (id) => (dispatch) => {
     method: 'DELETE',
   })
     .then(() => {
-      dispatch(getBooks());
+      dispatch({
+        type: REMOVE_BOOK,
+        payload: {
+          item_id: id,
+        },
+      });
     });
 };
 
 // Reducer function
-const booksReducer = (state = books, action) => {
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_BOOKS_LOADING:
       return {
@@ -97,7 +102,10 @@ const booksReducer = (state = books, action) => {
         books: [...state.books, action.payload],
       };
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+      return {
+        ...state,
+        books: state.books.filter((book) => book.item_id !== action.payload.id),
+      };
     case FETCH_BOOKS:
       return {
         ...state,
